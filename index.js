@@ -14,9 +14,6 @@ app.all('*', (req, res, next) => {
     next();
 });
 app.use('/', express.static(path.join(__dirname, 'client')));
-app.get('/doStuff', () => {
-    exec('press b');
-});
 app.get('/img', (req, res) => {
     screenshot({ format: 'png', filename: './test.png' })
         .then((img) => {
@@ -27,10 +24,23 @@ app.get('/img', (req, res) => {
             console.log(err);
         });
 });
-
-// exec('mousepos', (err, stdout, stderr) => {
-//     const coords = stdout.split(' ').map(i => Number(i));
-//     if (coords.length === 2) {
-//         console.log('x ' + coords[0] + ', y ' + coords[1]);
-//     }
-// });
+app.get('/mousePos', (req, res) => {
+    exec('mousepos', (err, stdout, stderr) => {
+        const coords = stdout.split(' ').map(i => Number(i));
+        if (coords.length === 2) {
+            res.send(JSON.stringify(coords));
+        }
+    });
+});
+app.get('/mouseMove', (req, res) => {
+    exec('mousemove ' + req.query.arg1 + ' ' + req.query.arg2);
+    res.sendStatus(200);
+});
+app.get('/mousePress', (req, res) => {
+    exec('mousepress ' + req.query.arg1 + ' ' + req.query.arg2);
+    res.sendStatus(200);
+});
+app.get('/press', (req, res) => {
+    exec('press ' + req.query.arg1 + ' ' + req.query.arg2);
+    res.sendStatus(200);
+});
