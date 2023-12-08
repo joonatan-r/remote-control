@@ -2,12 +2,17 @@
 let imgLoaded = false;
 let naturalHeight = 0;
 let naturalWidth = 0;
+const dataInput = document.getElementById('dataInput');
 const img = document.createElement('img');
 img.src = window.location.origin + '/img';
 img.onload = () => {
     imgLoaded = true;
-    if (naturalHeight === 0 || naturalWidth === 0) {
-        // store only once as seem to be able to be 0 if not fully loaded 
+    if (
+        img.naturalHeight !== 0
+        && img.naturalWidth !== 0
+        && (naturalHeight !== img.naturalHeight || naturalWidth !== img.naturalWidth)
+    ) {
+        // seem to be able to be 0 if not fully loaded 
         naturalHeight = img.naturalHeight;
         naturalWidth = img.naturalWidth;
     }
@@ -20,7 +25,7 @@ img.onmousedown = (e) => {
     const relativeY = y / rect.height;
     const pixelX = relativeX * naturalWidth;
     const pixelY = relativeY * naturalHeight;
-    fetch(window.location.origin + '/mouseMove?arg1=' + pixelX + '&arg2=' + pixelY);
+    fetch(window.location.origin + '/mouseMove?arg1=' + pixelX + '&arg2=' + pixelY + '&data=' + dataInput.value);
 }
 document.body.appendChild(img);
 const mouse = document.createElement('p');
@@ -34,7 +39,7 @@ mouse.innerHTML = 'V';
 document.body.appendChild(mouse);
 
 async function updateMouse() {
-    fetch(window.location.origin + '/mousePos')
+    fetch(window.location.origin + '/mousePos' + '?data=' + dataInput.value)
         .then(r => r.json())
         .then(r => {
             mouse.style.left = r[0] + 'px';
@@ -48,7 +53,7 @@ setInterval(() => {
     if (imgLoaded) {
         imgLoaded = false;
         // workaround for no cache
-        img.src = window.location.origin + '/img?date=' + new Date().getTime();
+        img.src = window.location.origin + '/img?date=' + new Date().getTime() + '&data=' + dataInput.value;
         updateMouse();
     }
 }, 500);
@@ -61,11 +66,11 @@ pressButton.onclick = () => {
     const action = pressed[currentVal] ? 'u' : 'd';
 
     if (currentVal === 'mouseLeft') {
-        fetch(window.location.origin + '/mousePress?arg1=l&arg2=' + action);
+        fetch(window.location.origin + '/mousePress?arg1=l&arg2=' + action + '&data=' + dataInput.value);
     } else if (currentVal === 'mouseRight') {
-        fetch(window.location.origin + '/mousePress?arg1=r&arg2=' + action);
+        fetch(window.location.origin + '/mousePress?arg1=r&arg2=' + action + '&data=' + dataInput.value);
     } else {
-        fetch(window.location.origin + '/press?arg1=' + currentVal + '&arg2=' + action);
+        fetch(window.location.origin + '/press?arg1=' + currentVal + '&arg2=' + action + '&data=' + dataInput.value);
     }
     pressed[currentVal] = !pressed[currentVal];
     pressButton.innerHTML = pressed[currentVal] ? 'Up' : 'Down';
