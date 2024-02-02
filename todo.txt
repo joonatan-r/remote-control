@@ -1,0 +1,32 @@
+
+TODO
+
+    Add proper scan codes for each key
+
+    some virtual keys:
+
+    0xBA    ^
+    0xBB    +
+    0xBC    ,
+    0xBD    -
+    0xBE    .
+    0xBF    '
+    0xC0    o with two dots
+    0xDB    accent mark
+    0xDC    section mark
+    0xDD    a with circle
+    0xDE    a with two dots
+    0xE2    <
+
+    scan code for ba: 1b
+    scan code for bb: c
+    scan code for bc: 33
+    scan code for bd: 35
+    scan code for be: 34
+    scan code for bf: 2b
+    scan code for c0: 27
+    scan code for db: d
+    scan code for dc: 29
+    scan code for dd: 1a
+    scan code for de: 28
+    scan code for e2: 56
