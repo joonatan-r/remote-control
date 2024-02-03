@@ -27,109 +27,111 @@ For region specific keys (all scan codes non-extended and keys non-numpad):
 - 0xE2 virtual / 0x56 scan code --> "<"
 
 
-Symbol      Shifted Symbol	    Location	    V-Scan Code
 
-Esc                                             0x001
-1 		        ! 	  		                    0x002
-2 		        @ 	  		                    0x003
-3 		        # 	  		                    0x004
-4 		        $ 	  		                    0x005
-5 		        % 	  		                    0x006
-6 		        ^ 	  		                    0x007
-7 		        & 	  		                    0x008
-8 		        * 	  		                    0x009
-9 		        ( 	  		                    0x00a
-0 		        ) 	  		                    0x00b
-- 		        _ 	  		                    0x00c
-= 		        + 	  		                    0x00d
-Backspace 	  	  		                        0x00e
-Tab 	  	  			                        0x00f
-Q 	  	  			                            0x010
-W 	  	  			                            0x011
-E 	  	  			                            0x012
-R 	  	  			                            0x013
-T 	  	  			                            0x014
-Y 	  	  			                            0x015
-U 	  	  			                            0x016
-I 	  	  			                            0x017
-O 	  	  			                            0x018
-P 	  	  			                            0x019
-[ 		        { 	 		                    0x01a
-] 		        } 		  	                    0x01b
-Enter 	  	  			                        0x01c
-Ctrl 	  		                left 		    0x01d
-A 	  	  			                            0x01e
-S 	  	  			                            0x01f
-D 	  	  			                            0x020
-F 	  	  			                            0x021
-G 	  	  			                            0x022
-H 	  	  			                            0x023
-J 	  	  			                            0x024
-K 	  	  			                            0x025
-L 	  	  			                            0x026
-; 	  	  			                            0x027
-' 	  	  			                            0x028
-` 	  	  			                            0x029
-Shift 	  		                left	 	    0x02a
-\ 		        | 		  	                    0x02b
-Z 	  	  			                            0x02c
-X 	  	  			                            0x02d
-C 	  	  			                            0x02e
-V 	  	  			                            0x02f
-B 		  			                            0x030
-N 	  	  			                            0x031
-M 	  	  			                            0x032
-, 		        < 	  		                    0x033
-. 		        > 		  	                    0x034
-/ 		        ? 		  	                    0x035
-Shift 	  		                right 		    0x036
-* 	  		                    numeric pad 	0x037
-Alt 	  		                left 		    0x038
-Space bar 	  	  		                        0x039
-Caps Lock 	  		  	                        0x03a
-F1 	  	  			                            0x03b
-F2 	  	  			                            0x03c
-F3 	  	  			                            0x03d
-F4 	  			  	                            0x03e
-F5 	  			  	                            0x03f
-F6 	  			  	                            0x040
-F7 	  			  	                            0x041
-F8 	  			  	                            0x042
-F9 	  			  	                            0x043
-F10 	  			  	                        0x044
-Num Lock 	  	                numeric pad 	0x045
-Scroll Lock 	  		  	                    0x046
-Home 		    7 	            numeric pad 	0x047
-Up arrow 	    8 	            numeric pad 	0x048
-PgUp 		    9 	            numeric pad 	0x049
-- 			                    numeric pad 	0x04a
-Left arrow 	    4 	            numeric pad 	0x04b
-5 			                    numeric pad 	0x04c
-Right arrow 	6 	            numeric pad 	0x04d
-+ 			                    numeric pad 	0x04e
-End 		    1 	            numeric pad 	0x04f
-Down arrow 	    2 	            numeric pad 	0x050
-PgDn 		    3 	            numeric pad 	0x051
-Ins 		    0 	            numeric pad 	0x052
-Del 	  		                numeric pad 	0x053
-F11 	  	  			                        0x057
-F12 	  	  			                        0x058
-Break 		    Pause 	  		                0x100
-Enter 	  		                numeric pad 	0x11c
-Ctrl 	  		                right 		    0x11d
-/ 	  		                    numeric pad 	0x135
-SysRq 		    PrtSc 	  		                0x137
-Alt 	  		                right 		    0x138
-Home 	  		                function pad 	0x147
-Up arrow 	  	                function pad 	0x148
-Page Up 	  	                function pad 	0x149
-Left arrow 	  	                function pad 	0x14b
-Right arrow 	  	            function pad 	0x14d
-End 	  		                function pad 	0x14f
-Down arrow 	  	                function pad 	0x150
-Page Down 	  	                function pad 	0x151
-Insert 	  		                function pad 	0x152
-Delete 	  		                function pad 	0x153
-Windows 	  	                left 		    0x15b
-Windows 	  	                right 		    0x15c
-Menu 	  	  			                        0x15d
+Symbol      Shifted Symbol        Location        V-Scan Code
+
+Esc                                                 0x001
+1                 !                                 0x002
+2                 @                                 0x003
+3                 #                                 0x004
+4                 $                                 0x005
+5                 %                                 0x006
+6                 ^                                 0x007
+7                 &                                 0x008
+8                 *                                 0x009
+9                 (                                 0x00a
+0                 )                                 0x00b
+-                 _                                 0x00c
+=                 +                                 0x00d
+Backspace                                           0x00e
+Tab                                                 0x00f
+Q                                                   0x010
+W                                                   0x011
+E                                                   0x012
+R                                                   0x013
+T                                                   0x014
+Y                                                   0x015
+U                                                   0x016
+I                                                   0x017
+O                                                   0x018
+P                                                   0x019
+[                 {                                 0x01a
+]                 }                                 0x01b
+Enter                                               0x01c
+Ctrl                               left             0x01d
+A                                                   0x01e
+S                                                   0x01f
+D                                                   0x020
+F                                                   0x021
+G                                                   0x022
+H                                                   0x023
+J                                                   0x024
+K                                                   0x025
+L                                                   0x026
+;                                                   0x027
+'                                                   0x028
+`                                                   0x029
+Shift                              left             0x02a
+\                 |                                 0x02b
+Z                                                   0x02c
+X                                                   0x02d
+C                                                   0x02e
+V                                                   0x02f
+B                                                   0x030
+N                                                   0x031
+M                                                   0x032
+,                 <                                 0x033
+.                 >                                 0x034
+/                 ?                                 0x035
+Shift                              right            0x036
+*                                  numeric pad      0x037
+Alt                                left             0x038
+Space bar                                           0x039
+Caps Lock                                           0x03a
+F1                                                  0x03b
+F2                                                  0x03c
+F3                                                  0x03d
+F4                                                  0x03e
+F5                                                  0x03f
+F6                                                  0x040
+F7                                                  0x041
+F8                                                  0x042
+F9                                                  0x043
+F10                                                 0x044
+Num Lock                           numeric pad      0x045
+Scroll Lock                                         0x046
+Home              7                numeric pad      0x047
+Up arrow          8                numeric pad      0x048
+PgUp              9                numeric pad      0x049
+-                                  numeric pad      0x04a
+Left arrow        4                numeric pad      0x04b
+5                                  numeric pad      0x04c
+Right arrow       6                numeric pad      0x04d
++                                  numeric pad      0x04e
+End               1                numeric pad      0x04f
+Down arrow        2                numeric pad      0x050
+PgDn              3                numeric pad      0x051
+Ins               0                numeric pad      0x052
+Del                                numeric pad      0x053
+F11                                                 0x057
+F12                                                 0x058
+Break             Pause                             0x100
+Enter                              numeric pad      0x11c
+Ctrl                               right            0x11d
+/                                  numeric pad      0x135
+SysRq             PrtSc                             0x137
+Alt                                right            0x138
+Home                               function pad     0x147
+Up arrow                           function pad     0x148
+Page Up                            function pad     0x149
+Left arrow                         function pad     0x14b
+Right arrow                        function pad     0x14d
+End                                function pad     0x14f
+Down arrow                         function pad     0x150
+Page Down                          function pad     0x151
+Insert                             function pad     0x152
+Delete                             function pad     0x153
+Windows                            left             0x15b
+Windows                            right            0x15c
+Menu                                                0x15d
+
